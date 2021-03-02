@@ -1,5 +1,6 @@
 function writeContent(content)
 {
+  alert(content.provider);
   // preappend data
   document.write("<style>#loadingbar{display:none !important;}</style><div id=\"page-wrapper\"><div id=\"content-all\">Content:");
   var output = ""
