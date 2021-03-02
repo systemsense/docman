@@ -31,7 +31,7 @@ function writeContent(content)
   document.write("</div></div>");
 }
 
-function loadshell()
+function loadcontent()
 {
 	
 	
