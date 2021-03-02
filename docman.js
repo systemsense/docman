@@ -43,7 +43,7 @@ function loadshell()
 	document.write("<meta http-equiv=\"content-type\" content=\"text\/html; charset=utf-8\" />")
 /*	document.write("<link href=\"\/community-resources/style.css\" rel=\"stylesheet\" type=\"text\/css\" />")*/
 	document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
-	if(url.indexOf("/download/") != -1)
+	if(urlx.indexOf("/download/") != -1)
 	{
 		document.write("<i id=\"loadingbar\">Preparing file for download...</i>");	
 	}
