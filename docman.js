@@ -2,6 +2,13 @@ function writeContent(content)
 {
   alert(content.provider);
   // preappend data
+  document.write("<html><head><title>System Sense DOCMAN</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />")
+  document.write("<meta name=\"viewport\" content=\"initial-scale=1, minimum-scale=1, width=device-width\" \/>")
+  document.write("<meta http-equiv=\"content-type\" content=\"text\/html; charset=utf-8\" />")
+	/*	document.write("<link href=\"\/community-resources/style.css\" rel=\"stylesheet\" type=\"text\/css\" />")*/
+	document.write("<script src=\"/docman/docman.js\" type=\"text\/javascript\"><\/script>");
+ 	document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script></head><body>");
+
   document.write("<style>#loadingbar{display:none !important;}</style><div id=\"page-wrapper\"><div id=\"content-all\">Content:");
   var output = ""
   output += "<span><img src=\"https:\/\/systemsense.github.io\/docman\/images\/icon_back.png\">&nbsp;&nbsp;<a href=\"../\">Up One Folder<\/a></span><br>"  
@@ -39,11 +46,11 @@ function loadshell()
 
 
 	var provider = window.location.pathname.substring(1).split('/')[4];
-	document.write("<head><title>System Sense DOCMAN</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />")
+	document.write("<html><head><title>System Sense DOCMAN</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />")
 	document.write("<meta name=\"viewport\" content=\"initial-scale=1, minimum-scale=1, width=device-width\" \/>")
 	document.write("<meta http-equiv=\"content-type\" content=\"text\/html; charset=utf-8\" />")
 /*	document.write("<link href=\"\/community-resources/style.css\" rel=\"stylesheet\" type=\"text\/css\" />")*/
-	document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script></head><body>");
+	document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
 	if(urlx.indexOf("/download/") != -1)
 	{
 		document.write("<i id=\"loadingbar\">Preparing file for download...</i>");	
