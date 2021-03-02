@@ -28,7 +28,7 @@ function loadshell()
 	
 	
 	var urlx = window.location.pathname.substring(1);
-	var xstate = getParameterByName('state', urlx);
+	var statex = getParameterByName('state', urlx);
 
 	try
 	{
