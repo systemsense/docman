@@ -37,7 +37,7 @@ function loadshell()
 	catch(err){filename = "index.html"}
 
 
-	var provider = decodeURI(url.split("/")[4])
+	var provider = decodeURI(urlx.split("/")[4])
 	document.write("<head><title>System Sense DOCMAN</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />")
 	document.write("<meta name=\"viewport\" content=\"initial-scale=1, minimum-scale=1, width=device-width\" \/>")
 	document.write("<meta http-equiv=\"content-type\" content=\"text\/html; charset=utf-8\" />")
