@@ -28,6 +28,7 @@ function loadshell()
 	
 	
 	var urlx = window.location.pathname.substring(1);
+	var xstate = getParameterByName('state', urlx);
 
 	try
 	{
@@ -69,3 +70,14 @@ try
 }
 	catch(err){}
 }
+function getParameterByName(name, defaultx, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return defaultx;
+    if (!results[2]) return defaultx;
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+// (C) 2020 Daniel Pritchard
