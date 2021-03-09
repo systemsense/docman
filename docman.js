@@ -15,7 +15,7 @@ function writeContent(content)
     {
       if(thisItem.ext == "doc" || thisItem.ext == "docx" || thisItem.ext == "docxm" || thisItem.ext == "xlsx" || thisItem.ext == "xlsx" || thisItem.ext == "xlsxm" || thisItem.ext == "ppt" || thisItem.ext == "pptx" || thisItem.ext == "pdf" || thisItem.ext == "zip")	      
 	{
-	      output += "<span><img src=\"https:\/\/systemsense.github.io\/s\/icon_"+thisItem.ext+".png\">&nbsp;&nbsp;<a href=\"view/"+thisItem.encodedRef + "/" + thisItem.name+"\">"+thisItem.name+"<\/a></span><br>"
+	      	output += "<span><img src=\"https:\/\/systemsense.github.io\/s\/icon_"+thisItem.ext+".png\">&nbsp;&nbsp;<a href=\"view/"+thisItem.encodedRef + "/" + thisItem.name+"\">"+thisItem.name+"<\/a></span><br>"
 	}
 	else
 	{
