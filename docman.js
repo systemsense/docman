@@ -12,7 +12,7 @@ function writeContent(content)
     }
     if(thisItem.type == "file")
     {
-      output += "<span><img src=\"https:\/\/systemsense.github.io\/docman\/images\/icon_file.png\">&nbsp;&nbsp;<a href=\"download/"+thisItem.encodedref + "/" + thisItem.name+"/\">"+thisItem.name+"<\/a></span><br>"
+      output += "<span><img src=\"https:\/\/systemsense.github.io\/docman\/images\/icon_file.png\">&nbsp;&nbsp;<a href=\"download/"+thisItem.encodedref + "/" + thisItem.name+"\">"+thisItem.name+"<\/a></span><br>"
     }
     
 
