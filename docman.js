@@ -57,7 +57,7 @@ function loadContent()
 	
 	if(provider == "sharepoint")
 	{
-		if(urlx.indexOf("/download/") != -1)
+		if(urlx.indexOf("/view/") != -1)
 		{
 			if(window.self !== window.top)
 			{
