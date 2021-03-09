@@ -1,6 +1,7 @@
 function writeContent(content)
 {
   // preappend data
+  document.title = content.foldername;
   document.write("<style>#loadingbar{display:none !important;}</style><div id=\"page-wrapper\"><br><br><div id=\"content-all\"><h4>" + content.foldername + "</h4><p>Press any link to continue to that folder/file</p><span id=\"listing\" class=\"menu\">");
   var output = ""
   output += "<span><img src=\"https:\/\/systemsense.github.io\/docman\/images\/icon_back.png\">&nbsp;&nbsp;<a href=\"../\">Up One Folder<\/a></span><br>"  
@@ -8,7 +9,7 @@ function writeContent(content)
     var thisItem = content.items[i];
     if(thisItem.type == "folder")
     {     
-      output += "<span><img src=\"https:\/\/systemsense.github.io\/docman\/images\/icon_folder.png\">&nbsp;&nbsp;<a href=\""+thisItem.encodedName+"/\">"+thisItem.name+"<\/a></span><br>"
+      output += "<span><img src=\"https:\/\/systemsense.github.io\/docman\/images\/icon_folder.png\">&nbsp;&nbsp;<a href=\""+thisItem.encodedName+"/\">"+thisItem.name+"<\/a></span><br>"	  
     }
     if(thisItem.type == "file")
     {
