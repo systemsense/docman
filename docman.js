@@ -4,22 +4,22 @@ function writeContent(content)
   document.title = content.foldername;
   document.write("<style>#loadingbar{display:none !important;}</style><div id=\"page-wrapper\"><div id=\"content-all\"><h4>" + content.foldername + "</h4><p>Press any link to continue to that folder/file</p><span id=\"listing\" class=\"menu\">");
   var output = ""
-  output += "<span><img src=\"https:\/\/systemsense.github.io\/docman\/images\/icon_back.png\">&nbsp;&nbsp;<a href=\"../\">Up One Folder<\/a></span><br>"  
+  output += "<span><img src=\"https:\/\/systemsense.github.io\/s\/icon_back.png\">&nbsp;&nbsp;<a href=\"../\">Up One Folder<\/a></span><br>"  
   for (i = 0; i < content.items.length; i++) {
     var thisItem = content.items[i];
     if(thisItem.type == "folder")
     {     
-      output += "<span><img src=\"https:\/\/systemsense.github.io\/docman\/images\/icon_folder.png\">&nbsp;&nbsp;<a href=\""+thisItem.encodedName+"/\">"+thisItem.name+"<\/a></span><br>"	  
+      output += "<span><img src=\"https:\/\/systemsense.github.io\/s\/icon_folder.png\">&nbsp;&nbsp;<a href=\""+thisItem.encodedName+"/\">"+thisItem.name+"<\/a></span><br>"	  
     }
     if(thisItem.type == "file")
     {
       if(thisItem.ext == "doc" || thisItem.ext == "docx" || thisItem.ext == "docxm" || thisItem.ext == "xlsx" || thisItem.ext == "xlsx" || thisItem.ext == "xlsxm" || thisItem.ext == "ppt" || thisItem.ext == "pptx" || thisItem.ext == "pdf" || thisItem.ext == "zip")	      
 	{
-	      output += "<span><img src=\"https:\/\/systemsense.github.io\/docman\/images\/icon_"+thisItem.ext+".png\">&nbsp;&nbsp;<a href=\"view/"+thisItem.encodedRef + "/" + thisItem.name+"\">"+thisItem.name+"<\/a></span><br>"
+	      output += "<span><img src=\"https:\/\/systemsense.github.io\/s\/icon_"+thisItem.ext+".png\">&nbsp;&nbsp;<a href=\"view/"+thisItem.encodedRef + "/" + thisItem.name+"\">"+thisItem.name+"<\/a></span><br>"
 	}
 	else
 	{
-		output += "<span><img src=\"https:\/\/systemsense.github.io\/docman\/images\/icon_file.png\">&nbsp;&nbsp;<a href=\"view/"+thisItem.encodedRef + "/" + thisItem.name+"\">"+thisItem.name+"<\/a></span><br>"
+		output += "<span><img src=\"https:\/\/systemsense.github.io\/s\/icon_file.png\">&nbsp;&nbsp;<a href=\"view/"+thisItem.encodedRef + "/" + thisItem.name+"\">"+thisItem.name+"<\/a></span><br>"
 	}
 	    
       
