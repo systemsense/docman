@@ -1,7 +1,7 @@
 function writeContent(content)
 {
   // preappend data
-  document.write("<style>#loadingbar{display:none !important;}</style><div id=\"page-wrapper\"><div id=\"content-all\">");
+  document.write("<style>#loadingbar{display:none !important;}</style><div id=\"page-wrapper\"><br><br><div id=\"content-all\"><h4>" + content.foldername + "</h4><p>Press any link to continue to that folder/file</p><span id=\"listing\" class=\"menu\">");
   var output = ""
   output += "<span><img src=\"https:\/\/systemsense.github.io\/docman\/images\/icon_back.png\">&nbsp;&nbsp;<a href=\"../\">Up One Folder<\/a></span><br>"  
   for (i = 0; i < content.items.length; i++) {
