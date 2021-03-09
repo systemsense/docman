@@ -59,7 +59,7 @@ function loadContent()
 	{
 		if(urlx.indexOf("/download/") != -1)
 		{
-			document.write("<script type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbwj81P-q3z3WYDmOCl99FYtSdzbF9hCVla2WqSGGHhJYmO_RDDmZo0\/exec?lookup="+statex+"&filename="+filename+"\"><\/script><\/head>");			
+			document.write("<script type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbyJcOnas1azziwJ6jr6CedHb6W0hnNlQSnYSW-WzCLdsL79e3M8WzVRKjoNLBM5I3pP\/exec?lookup="+statex+"&filename="+filename+"\"><\/script><\/head>");			
 		}
 		else
 		{
