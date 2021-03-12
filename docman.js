@@ -10,35 +10,36 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     else
     {
 
-    try
-    {
-		document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"))
-    }
-    catch(err)
-    {
-    }
-	    
-   var i = document.createElement('div');	    
-   document.body.appendChild(i);
-   
-	if(ext == "doc" || ext == "docx" || ext == "xlsx" || ext == "ppt" || ext == "pptx" || ext == "pdf" || ext == "txt" || ext == "rtf")
-	{
-		if(ext == "xlsx" || ext == "pdf")
+		try
 		{
-			i.innerHTML = "<div id=\"overlaybar\" style=\"position: fixed; z-index:100; bottom: 20px !important; left: 0px; height:20px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a href=\"view/"+encodedRef+"/"+filename+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">View File<\/a>&nbsp;&nbsp;<a href=\"download/"+encodedRef+"/"+filename+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\" >Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"
+			document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"))
+		}
+		catch(err)
+		{
+		}
+			
+	   var i = document.createElement('div');	    
+	   document.body.appendChild(i);
+	   
+		if(ext == "doc" || ext == "docx" || ext == "xlsx" || ext == "ppt" || ext == "pptx" || ext == "pdf" || ext == "txt" || ext == "rtf")
+		{
+			if(ext == "xlsx" || ext == "pdf")
+			{
+				i.innerHTML = "<div id=\"overlaybar\" style=\"position: fixed; z-index:100; bottom: 20px !important; left: 0px; height:20px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a href=\"view/"+encodedRef+"/"+filename+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">View File<\/a>&nbsp;&nbsp;<a href=\"download/"+encodedRef+"/"+filename+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\" >Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"
+			}
+			else
+			{
+				i.innerHTML = "<div id=\"overlaybar\" style=\"position: fixed; z-index:100; bottom: 20px !important; left: 0px; height:20px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a href=\"view/"+encodedRef+"/"+filename+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">View File<\/a>&nbsp;&nbsp;<a href=\"download/"+encodedRef+"/"+filename+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\" >Download File<\/a>&nbsp;&nbsp;<a href=\"pdf/"+encodedRef+"/"+filename+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\" >Download as PDF<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"			
+			}
 		}
 		else
 		{
-			i.innerHTML = "<div id=\"overlaybar\" style=\"position: fixed; z-index:100; bottom: 20px !important; left: 0px; height:20px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a href=\"view/"+encodedRef+"/"+filename+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">View File<\/a>&nbsp;&nbsp;<a href=\"download/"+encodedRef+"/"+filename+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\" >Download File<\/a>&nbsp;&nbsp;<a href=\"pdf/"+encodedRef+"/"+filename+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\" >Download as PDF<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"			
+			i.innerHTML = "<div id=\"overlaybar\" style=\"position: fixed; z-index:100; bottom: 20px !important; left: 0px; height:20px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a href=\"download/"+encodedRef+"/"+filename+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\" >Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"
 		}
-	}
-	else
-	{
-		i.innerHTML = "<div id=\"overlaybar\" style=\"position: fixed; z-index:100; bottom: 20px !important; left: 0px; height:20px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a href=\"download/"+encodedRef+"/"+filename+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\" >Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"
-	}
 
-   
-//	setTimeout(function(){document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"));}, 10000);
+	   
+	//	setTimeout(function(){document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"));}, 10000);
+		}
 }
 
 
@@ -79,7 +80,6 @@ function writeContent(content)
 
 function loadContent()
 {
-
 	var urlx = window.location.pathname.substring(1);
 	var statex = getParameterByName('state', urlx);
 
@@ -88,7 +88,6 @@ function loadContent()
 	var filename = urlx.substring(urlx.lastIndexOf('/')+1);
 	}
 	catch(err){filename = "index.html"}
-
 
 	var provider = window.location.pathname.substring(1).split('/')[4];
 	document.write("<html><head><title>System Sense DOCMAN</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />")
@@ -105,9 +104,7 @@ function loadContent()
 	{
 		document.write("<i id=\"loadingbar\">Loading folder information...</i>");
 	}
-	
 
-	
 	if(provider == "sharepoint")
 	{
 		if(urlx.indexOf("/view/") != -1)
